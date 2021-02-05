@@ -17,3 +17,5 @@
   - will clean the directories of all executables
 - `python pymake push "message"` 
   - will log your changes and push your code to github with a provided commit message
+- `python pymake pull`
+    - will pull all changes from github repo
