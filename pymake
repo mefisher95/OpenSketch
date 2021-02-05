@@ -38,6 +38,8 @@ if len(sys.argv) > 1:
         if sys.argv[1] == 'push':
             log.log(sys.argv[2], 'changelog')
             subprocess.run('python util/clean.py .out safety=false', shell=True)
+            subprocess.run('python util/clean.py .pyc safety=false', shell=True)
+            subprocess.run('rmdir ./util/__pycache__', shell=True)
             subprocess.run("git add .", shell=True)
             subprocess.run("git commit -m '{0}'".format(sys.argv[2]), shell=True)
             subprocess.run("git push", shell=True)

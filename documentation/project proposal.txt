@@ -1,0 +1,11 @@
+Project Proposal: OpenSketch
+
+The goal of this project is to create a widget or a tool that is 
+essentially a simple and easy to use notepad or sketchbook. 
+
+The user should be able to create various objects or pads of 
+various sizes, that they can easily write on or draw. They 
+should be able to upload images to be drawn on and save anything
+drawn with the tool as an image file. All objects created by the
+user should be persistant and be accessable at any point unless
+specifically deleted by the user.  
