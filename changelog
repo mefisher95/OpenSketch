@@ -6,3 +6,5 @@ added push argument to pymake argument, fixed bug in push command
 added documentation dir and added Project proposal as a txt document. Added brief description of project in the doc
 2021-02-07 03:43:47.891058
 updated some settings, made some changes to cpp code to show pixels on screen
+2021-02-07 03:48:29.296230
+added code from https://gist.github.com/mimukit/77dc7546e139b3787e9359578c80b374, confirmed functionality. will dissect later to figure out how to make it work
