@@ -4,3 +4,5 @@ initial upload of all files and general directory structure. Included additions 
 added push argument to pymake argument, fixed bug in push command
 2021-02-04 18:37:16.774874
 added documentation dir and added Project proposal as a txt document. Added brief description of project in the doc
+2021-02-07 03:43:47.891058
+updated some settings, made some changes to cpp code to show pixels on screen
