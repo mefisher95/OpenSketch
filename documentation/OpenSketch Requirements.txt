@@ -1,0 +1,25 @@
+﻿SKMFCFBH Inc.
+Requirement Analysis
+
+
+* Some sort of GUI - High, with ranging perks?
+   * Changing to pens, pen-thickness, pen-colors - Low
+   * Changing to text, choose text size, text color - Low
+   * Changing to shapes, choose shape, size, color - Low
+   * File management - High
+      * Create new pad
+      * Delete pad
+      * Save current pad
+      * Load a previous pad
+   * RGB Sliders - Low
+* Ability to draw with mouse cursor - High
+* Ability to change color of pen - LOW
+* Ability to change brush thickness -LOW
+* Ability to change background color - Low
+* Ability to save to “.pad” file extension - MEDIUM
+* User can draw shapes from pre-defined templates - Medium
+   * Ex: star, rectangles, nonagons, etc
+* User can change the dimensions of the pad and this setting is remembered - Low
+* User can type text onto the pad - Medium
+* Ability to change the size and color of the text - Low
+* Upload and draw on a picture - Non-functional
