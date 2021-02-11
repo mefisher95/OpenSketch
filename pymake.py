@@ -11,9 +11,13 @@ output = 'OpenSketch.out'
 
 if len(sys.argv) > 1:
     if sys.argv[1] == 'install':
-        subprocess.run("sudo yum install -y g++", shell=True)
-        subprocess.run("sudo yum install -y freeglut freeglut-devel glew glew-devel", shell=True)
-        subprocess.run("sudo yum install -y glm-devel", shell=True)
+        # subprocess.run("sudo yum install -y g++", shell=True)
+        # subprocess.run("sudo yum install -y freeglut freeglut-devel glew glew-devel", shell=True)
+        # subprocess.run("sudo yum install -y glm-devel", shell=True)
+
+        subprocess.run('sudo yum install -y SDL2 SDL2-devel SDL2_image SDL2_image-devel SDL2_ttf SDL2_ttf-devel', shell=True)
+
+
     
     if sys.argv[1] == 'm':
         cmd = cmd + ' '.join([x for x in src]) + ' ' +\
