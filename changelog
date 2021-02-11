@@ -10,3 +10,5 @@ updated some settings, made some changes to cpp code to show pixels on screen
 added code from https://gist.github.com/mimukit/77dc7546e139b3787e9359578c80b374, confirmed functionality. will dissect later to figure out how to make it work
 2021-02-11 14:19:57.234631
 added sdl2 install to pymake
+2021-02-11 14:21:20.337360
+added sdl2 install to pymake
