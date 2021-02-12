@@ -12,3 +12,5 @@ added code from https://gist.github.com/mimukit/77dc7546e139b3787e9359578c80b374
 added sdl2 install to pymake
 2021-02-11 14:21:20.337360
 added sdl2 install to pymake
+2021-02-11 21:29:43.615773
+added a bunch of sdl2 functions and began to experiment with shape drawing. made shapes polymorphic to allow for multi shape drawing

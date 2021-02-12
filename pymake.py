@@ -3,9 +3,9 @@ import sys
 from util import log
 
 cmd = 'g++ '
-src = ['src/*.cpp']
-include = ['-Iincludes']
-link = ['-lGL', '-lGLU', '-lglut', '-lGLEW']
+src = ['src/*.cpp', 'src/sdl2/*.cpp']
+include = ['-Iincludes', '-Iincludes/sdl2']
+link = ['-lGL', '-lGLU', '-lglut', '-lGLEW', '-lSDL2']
 output = 'OpenSketch.out'
 
 
