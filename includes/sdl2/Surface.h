@@ -22,15 +22,22 @@ class Surface
 public:
     Surface(const Window &window)
     {
-        if (window.valid())
-        {
-            surface_ = SDL_GetWindowSurface(window.get_window());
-        }
-        else
-        {
-            throw InvalidWindowObj();
-        }
+        // if (window.valid())
+        // {
+        //     surface_ = SDL_GetWindowSurface(window.get_window());
+        // }
+        // else
+        // {
+        //     throw InvalidWindowObj();
+        // }
 
+        SDL_Init(SDL_INIT_VIDEO);
+        std::cout << int(surface_->format->BytesPerPixel) << std::endl;
+    }
+
+    ~Surface()
+    {
+        SDL_Quit();
     }
 
     void fill_background(int r, int b, int g)
@@ -51,7 +58,6 @@ public:
     //                      Uint16(w), Uint16(h)};
     //     SDL_BlitSurface(image.get_image(), &dst_, surface_, NULL);
     // }
-
 
 private:
     SDL_Surface* surface_;

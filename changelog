@@ -14,3 +14,5 @@ added sdl2 install to pymake
 added sdl2 install to pymake
 2021-02-11 21:29:43.615773
 added a bunch of sdl2 functions and began to experiment with shape drawing. made shapes polymorphic to allow for multi shape drawing
+2021-02-12 18:38:25.301350
+modernized code to conform to SDL2 styles. Everything is now being built and extended from Window.h
