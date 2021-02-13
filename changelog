@@ -18,3 +18,9 @@ added a bunch of sdl2 functions and began to experiment with shape drawing. made
 modernized code to conform to SDL2 styles. Everything is now being built and extended from Window.h
 2021-02-12 18:58:05.074439
 added random pixel drawer for proof of concept
+2021-02-12 21:10:00.200842
+Added draw line functionality and mouse click expirement.
+2021-02-12 21:10:27.041078
+Added draw line functionality and mouse click expirement.
+2021-02-12 21:14:36.108572
+Added draw line functionality and mouse click expirement.

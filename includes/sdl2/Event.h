@@ -41,6 +41,7 @@ public:
 	SDL_Event event;
 
     bool quit() { return poll() && type() == QUIT; }
+	bool mouse_click_down() { return poll() && type() == MOUSEBUTTONDOWN;}
 
 // private:
 	// const Uint8 * kbd;

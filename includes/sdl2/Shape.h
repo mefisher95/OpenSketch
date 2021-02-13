@@ -27,7 +27,7 @@ private:
 typedef std::vector< Vertex > Verticies;
 
 
-std::ostream &operator<<(std::ostream &cout, const Vertex &v)
+/* std::ostream &operator<<(std::ostream &cout, const Vertex &v)
 {
     cout << "(" << v.x() <<  ", " << v.y() << ")";
     return cout;
@@ -42,7 +42,7 @@ std::ostream &operator<<(std::ostream &cout, const Verticies &vs)
     }
     cout << " }";
     return cout;
-}
+} */
 
 
 class Shape
