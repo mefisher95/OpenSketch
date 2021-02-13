@@ -13,26 +13,19 @@ int main()
 
 	std::vector< Shape* > shapes;
 
-	
+	Shape* shape = new Rect(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
 
-	while(1)
-	{
-		Shape* shape = new Rect(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
-		shapes.push_back(shape);
-		if (event.quit()) break;
-		window.clear_window();
-		for (int i = 0; i < shapes.size(); ++i)
-		{
-			window.set_shape(shapes[i]);
-		}
-		window.render();
-		std::cout << shapes.size() << std::endl;
-		// window.delay(10);
-	}
+	window.clear_window();
+	window.set_shape(shape);
+	window.render();
+	window.delay(9000);
 
-	for (int i = 0; i < shapes.size(); ++i)
-	{
-		delete shapes[i];
-	}
+	Vertex* v = shape->get_verticies()[2];
+	shape->translate(10, 20);
+	window.set_shape(shape);
+	window.render();
+	window.delay(9000);
+
+	delete shape;
 	return 0;
 }

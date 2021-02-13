@@ -49,10 +49,10 @@ void Window::set_pixel(int x, int y, const Color & c)
     SDL_RenderDrawPoint(render_, x, y);
 }
 
-void Window::set_line(const Vertex & v0, const Vertex & v1, const Color & c)
+void Window::set_line(const Vertex* v0, const Vertex* v1, const Color & c)
 {
     set_color(c);
-    SDL_RenderDrawLine(render_, v0.x(), v0.y(), v1.x(), v1.y());
+    SDL_RenderDrawLine(render_, v0->x(), v0->y(), v1->x(), v1->y());
 }
 
 void Window::set_shape(const Shape* shape)

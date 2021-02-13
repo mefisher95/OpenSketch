@@ -21,7 +21,7 @@ private:
 };
 
 
-typedef std::vector< Vertex > Verticies;
+typedef std::vector< Vertex* > Verticies;
 
 std::ostream &operator<<(std::ostream &cout, const Vertex &v);
 std::ostream &operator<<(std::ostream &cout, const Verticies &vs);

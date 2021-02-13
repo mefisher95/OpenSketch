@@ -42,7 +42,7 @@ public:
     void draw_rand_pixel(const Color &c = RED, int ammount = 1000);
 
     void set_pixel(int x, int y, const Color &c);
-    void set_line(const Vertex &v0, const Vertex &v1, const Color &c);
+    void set_line(const Vertex* v0, const Vertex* v1, const Color &c);
     void set_shape(const Shape* shape);
 
 private:
