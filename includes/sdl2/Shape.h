@@ -1,56 +1,15 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include <iostream>
-#include <vector>
 #include "Color.h"
-
-
-class Vertex
-{
-public:
-    Vertex(int x = 0, int y = 0)
-    :x_(x), y_(y)
-    {}
-
-    int &x() { return x_; }
-    int &y() { return y_; }
-
-    int x() const { return x_; }
-    int y() const { return y_; }
-
-private:
-    int x_;
-    int y_;
-};
-
-typedef std::vector< Vertex > Verticies;
-
-
-/* std::ostream &operator<<(std::ostream &cout, const Vertex &v)
-{
-    cout << "(" << v.x() <<  ", " << v.y() << ")";
-    return cout;
-}
-std::ostream &operator<<(std::ostream &cout, const Verticies &vs)
-{
-    cout << "{ ";
-    for (int i = 0; i < vs.size(); ++i)
-    {
-        cout << vs[i];
-        if (i < vs.size() - 1) cout << ", ";
-    }
-    cout << " }";
-    return cout;
-} */
-
+#include "Vertex.h"
 
 class Shape
 {
 public:
-    Shape(const Color& color = BLACK, 
-          int x = 0, int y = 0,
-          int w = 0, int h = 0)
+    Shape(int x = 0, int y = 0,
+          int w = 0, int h = 0,
+          const Color& color = BLACK)
     :color_(color), x_(x), y_(y), w_(w), h_(h)
     {}
 
@@ -82,7 +41,17 @@ protected:
     Verticies verticies;
 };
 
-
-
+class Rect: public Shape
+{
+public:
+    Rect(int x = 0, int y = 0, int w = 0, int h = 0, const Color &color = BLACK)
+    :Shape(x, y, w, h, color)
+    {
+        verticies.push_back(Vertex(x, y));
+        verticies.push_back(Vertex(x + w, y));   
+        verticies.push_back(Vertex(x + w, y + h));   
+        verticies.push_back(Vertex(x, y + h));   
+    }
+};
 
 #endif

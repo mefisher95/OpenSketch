@@ -24,3 +24,5 @@ Added draw line functionality and mouse click expirement.
 Added draw line functionality and mouse click expirement.
 2021-02-12 21:14:36.108572
 Added draw line functionality and mouse click expirement.
+2021-02-12 21:53:12.785724
+added general set_shape method that should render any shape with >0 verticies. due to the need to clear a screen at each iteration, should investigate method to store object render data without storing actual object, since individually rendering 10k+ objects is highly expensive

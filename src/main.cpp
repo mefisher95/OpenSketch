@@ -1,8 +1,7 @@
 #include <iostream>
 #include "Window.h"
 #include "Event.h"
-#include "math.h"
-#include <SDL2/SDL.h>
+#include "Shape.h"
 
 int main()
 {
@@ -12,20 +11,28 @@ int main()
 	Vertex start(100, 100);
 	Vertex end(250, 250);
 
+	std::vector< Shape* > shapes;
+
+	
+
 	while(1)
 	{
-		Color c = { Uint8(rand() % 256), Uint8(rand() % 256), Uint8(rand() % 256), Uint8(255)};
-		Vertex start(rand() % window.width() - 1, rand() % window.height() - 1);
-		Vertex end(250, 250);
+		Shape* shape = new Rect(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
+		shapes.push_back(shape);
 		if (event.quit()) break;
-		/* window.set_pixel(, , BLUE); */
-		window.set_line(start, end, c);
-		if (event.mouse_click_down())
+		window.clear_window();
+		for (int i = 0; i < shapes.size(); ++i)
 		{
-			std::cout <<  "success\n";
+			window.set_shape(shapes[i]);
 		}
 		window.render();
-		window.delay(10);
+		std::cout << shapes.size() << std::endl;
+		// window.delay(10);
+	}
+
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		delete shapes[i];
 	}
 	return 0;
 }

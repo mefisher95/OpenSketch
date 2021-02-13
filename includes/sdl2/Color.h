@@ -18,6 +18,8 @@ const Color BLACK  = {   0,   0,   0, 255 };
 const Color WHITE  = { 255, 255, 255, 255 };
 const Color GRAY   = { 100, 100, 100, 255 };
 
+Color rand_color();
+
 // std::ostream &operator<<(std::ostream &cout, const Color &c)
 // {
 //     cout << "{ Color: " << int(c.r)
