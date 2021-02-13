@@ -63,6 +63,7 @@ void Window::set_shape(const Shape* shape)
         set_line(v[i], v[i + 1], shape->get_color());
     }
     set_line(v[0], v[v.size() - 1], shape->get_color());
+    if (v.size() == 1) set_pixel(v[0]->x(), v[0]->y(), shape->get_color());
 }
 
 void Window::set_color(const Color &c)

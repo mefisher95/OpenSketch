@@ -5,6 +5,7 @@
 
 int main()
 {
+	int DELAY = 6000;
 	Window window(640, 480, WHITE);
 	Event event;
 
@@ -13,19 +14,57 @@ int main()
 
 	std::vector< Shape* > shapes;
 
-	Shape* shape = new Rect(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
+	Shape* rect = new Rect(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
+	Shape* line = new Line(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
+	Shape* triangle = new Triangle(rand() % window.width(), rand() % window.height(), rand() % 100, rand() % 100, rand_color());
+
+	shapes.push_back(rect);
+	shapes.push_back(line);
+	shapes.push_back(triangle);
 
 	window.clear_window();
-	window.set_shape(shape);
-	window.render();
-	window.delay(9000);
 
-	Vertex* v = shape->get_verticies()[2];
-	shape->translate(10, 20);
-	window.set_shape(shape);
-	window.render();
-	window.delay(9000);
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		std::cout << i << std::endl;
+		window.set_shape(shapes[i]);
+	}
 
-	delete shape;
+	window.render();
+	window.delay(DELAY);
+
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		shapes[i]->translate(10, 20);
+		window.set_shape(shapes[i]);
+	}
+
+	window.render();
+	window.delay(DELAY);
+
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		Vertex* v = shapes[i]->get_verticies()[1];
+		shapes[i]->move_vertex(v, v->x() + 10, v->y() - 10);
+		window.set_shape(shapes[i]);
+	}
+
+	window.render();
+	window.delay(DELAY);
+
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		shapes[i]->resize(30, 30);
+		window.set_shape(shapes[i]);
+	}
+
+	window.render();
+	window.delay(DELAY);
+
+	for (int i = 0; i < shapes.size(); ++i)
+	{
+		delete shapes[i];
+	}
+
 	return 0;
 }
