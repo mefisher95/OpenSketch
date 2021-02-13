@@ -34,6 +34,8 @@ public:
         // window_->title = "OpenSketch";
         if (window_ == NULL) throw WindowError(1);
         if (render_ == NULL) throw WindowError(2);
+
+        srand((unsigned int) time(NULL));
     }
     ~Window() 
     {
@@ -54,8 +56,23 @@ public:
     void render()
     {
         SDL_SetRenderDrawColor(render_, FILL.r, FILL.g, FILL.b,FILL.a);
-        SDL_RenderClear(render_);
+        // SDL_RenderClear(render_);
         SDL_RenderPresent(render_);
+    }
+
+    void draw_rand_pixel(const Color &c = RED, int ammount = 1000)
+    {
+        
+
+        for (int i = 0; i < ammount; ++i)
+        {
+            int x = rand() % 100 + 50;
+            int y = rand() % 100 + 50;
+            SDL_SetRenderDrawColor(render_, RED.r, RED.g, RED.b, RED.a);
+            SDL_RenderDrawPoint(render_, x, y);
+            render();
+            // SDL_RenderPresent(render_);
+        }
     }
 
     // OLD DONT KNOW IF I STILL WANT THEM

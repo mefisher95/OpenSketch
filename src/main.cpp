@@ -14,24 +14,11 @@ int main()
 
 	std::cout << v << std::endl;
 
-	for (int i = 0; i < 20; ++i)
+	while(1)
 	{
 		if (event.quit()) break;
-		window.render();
-		std::cout << i << std::endl;
-		window.delay(100);
+		window.draw_rand_pixel();
+		window.delay(10);
 	}
-
-
-	window.set_fullscreen_desktop();
-
-	for (int i = 0; i < 20; ++i)
-	{
-		if (event.quit()) break;
-		window.render();
-		std::cout << i << std::endl;
-		window.delay(100);
-	}
-	
 	return 0;
 }
